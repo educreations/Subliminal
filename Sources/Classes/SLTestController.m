@@ -256,7 +256,7 @@ u_int32_t random_uniform(u_int32_t upperBound) {
 - (void)abortIfSimulatorIsInconsistent {
     if ([SLTestController isBeingUnitTested]) return;
     
-    const UIDeviceOrientation testOrientation = UIDeviceOrientationPortrait;
+    const UIDeviceOrientation testOrientation = UIDeviceOrientationLandscapeLeft;
 
     [[SLDevice currentDevice] setOrientation:testOrientation];
     BOOL simulatorIsConsistent = ([UIDevice currentDevice].orientation == testOrientation);
